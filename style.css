@@ -1,22 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
 
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Poppins' ,sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    overflow:hidden;
+    overflow: hidden;
 }
 
-.container{
+.container {
     width: 100%;
     min-height: 100vh;
     background-color: #f3f5f8;
 }
-nav{
+
+nav {
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -34,18 +35,198 @@ nav{
     cursor: pointer;
     text-transform: uppercase;
 }
-b{
+
+b {
     font-size: 70px;
-    color: #7f00ff;;
+    color: #7f00ff;
+    ;
 }
+
 .navItems {
     display: flex;
 
 }
+
 .navItems li {
     list-style: none;
     margin: 0 15px;
 }
-.navItems li a{
+
+.navItems li a {
     font-size: 25px;
+    color: #3d535f;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navItems li:hover a,
+.links a:hover {
+    color: #7f00ff;
+}
+
+.links a {
+    font-size: 30px;
+    color: #3d535f;
+    margin: 25px 10px;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 80px);
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+.wrapper::before {
+    position: absolute;
+    content: '';
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    left: -90px;
+    top: 40%;
+    background: linear-gradient(45deg,#7f00ff, pink);
+    animation: object1 5s linear infinite;
+}
+.wrapper::after {
+    position: absolute;
+    content: '';
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    left: 40%;
+    top: 12%;
+    background: linear-gradient(45deg,#7f00ff, pink);
+    animation: object2 4s linear infinite;
+}
+@keyframes object1 {
+    50% {
+        left: -5%;
+        top: 41%;
+    }
+}
+@keyframes object2 {
+    50%{
+        left: 39%;
+        top: 9%;
+    }
+}
+
+.cols {
+    width: 50%;
+}
+.cols0 {
+    z-index: 5;
+    width: 60%;
+}
+
+.topline {
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: #3d535f;
+}
+
+.topline::after {
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: #7f00ff;
+}
+
+h1 {
+    display: block;
+    font-size: 7em;
+    font-weight: 900;
+    color: #3d535f;
+}
+
+.multiText {
+    color: #7f00ff;
+    text-transform: capitalize;
+}
+
+p {
+    display: block;
+    width: 90%;
+    font-size: 1.2em;
+    color: #3d535f;
+}
+.btns {
+    width: 100%;
+    position: relative;
+    left:150px;
+}
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #3d535f;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 4);
+    border-radius: 10px;
+    transition: background-color 1s ease-in-out;
+    transform: scale(1.0);
+    transition: 1000ms;
+}
+button:hover {
+    background-color: #7f00ff;
+    transform: 1000ms;
+    transform: scale(1.1);
+}
+
+.imgbox img{
+    position: relative;
+    height: 100%;
+    animation: animateUser 6s cubic-bezier(0.1, 0.1, 0.1, 0.1) infinite;
+    left:100px;
+}
+@keyframes animateUser{
+    0% {
+        right: 0;
+        top: 0;
+      }
+      50% {
+        right: 30px;
+        top: -40px;
+      }
+      100% {
+        right: 0;
+        top: 0;
+      }
+    }
+
+.imgbox #splash{
+    position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%) rotate(-35deg);
+  filter: saturate(200%);
+  animation: animate 8s cubic-bezier(0.1, 0.1, 0.1, 1) infinite;
+  width: 50%;
+  height: 70%;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) rotate(-35deg);
+  }
+  50% {
+    transform: translate(-50%, calc(-50% + 10px)) rotate(-35deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-35deg);
+  }
 }

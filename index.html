@@ -19,13 +19,47 @@
                 <li><a href="#">blog</a></li>
             </ul>
             <div class="links">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/thiago-penaloza-a3aa691b8/"><i class="fab fa-linkedin"></i></a>
+                <a target="_blank" href="https://www.instagram.com/thiagopenaloza/"><i class="fab fa-instagram"></i></a>
+                <a target="_blank" href="https://github.com/ThiagoPenaloza"><i class="fab fa-github"></i></a>
             </div>
         </nav>
         
+        <div class="wrapper">
+            <div class="cols cols0">
+                <span class="topline">Hello</span>
+                <h1>I'm <span class="multiText"></span></h1>
+                <p>My name is Thiago, and I'm a programmer with a passion for technology and innovation. I have a strong background in HTML, CSS and JavaScript, and I'm always eager to learn and improve my skills. I believe that programming is not just a job, but a way of life, and I'm committed to using my talents to create cutting-edge solutions for your company.</p>
+                <div class="btns">
+                    <button onclick="redirecionarCV()">download CV</button>
+                    <button onclick="redirecionarHire()">hire me</button>
+                </div>
+            </div>
+            <div class="cols cols1">
+                <div class="imgbox">
+                    <img src="19850.png" id="splash">
+                    <img src="bee movie.png">
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typingEffect = new Typed(".multiText",{
+            strings : ["coder","streamer", "designer"],
+            loop : true,
+            typeSpeed : 100,
+            backSpeed : 80,
+            backDelay : 1500
+        })
+
+        function redirecionarCV() {
+            window.open('#', '_blank');
+        }
+        function redirecionarHire() {
+            window.open('https://wa.me/5551993015031', '_blank');
+        }
+    </script>
 </body>
 </html>
-
